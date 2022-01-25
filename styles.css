@@ -20,3 +20,16 @@ h1 {
     font-weight: bold;
     font-style: italic; 
 }
+
+button {
+    background-color: goldenrod;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #016f32;
+    font-weight: bold;
+    width: 150px;;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    
+}
