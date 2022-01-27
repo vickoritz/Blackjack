@@ -34,3 +34,8 @@ function newCard() {
     cards.push(card)
     renderGame()
 }
+
+//    START           FINISH       STEP SIZE
+//for ( let count = 1;  count < 11;  count += 2 )  {}
+//for ( let i = 1;  i < 11;  i += 2 )  {} // convention to write i
+
