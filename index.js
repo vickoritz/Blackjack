@@ -1,15 +1,29 @@
-let firstCard = 10
-let secondCard = 4
-let cards [firstCard, secondCard] //array - ordered list of items
-let sum = firstCard + secondCard
+let cards [] //array - ordered list of items
+let sum = 0
 let hasBlackJack = false
-let isAlive = true
+let isAlive = false
 let message = ""
 let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
 
+function getRandomCard() { // called function declarations, avaliable on lines above unlike let variables
+    let randomNumber = Math.floor( Math.random()*13) + 1 //generate a random number betweel 1-11, and use floor to remove decimals
+    if (randomNumer > 10) {
+        return 10
+    } else if (randomNumer === 1) {
+        return 11
+    } else {
+        return randomNumer
+    }
+}
+
 function startGame() {
+    isAlive = true
+    let firstCard = getRandomCard()
+    let secondCard = getRandomCard()
+    cards = [firstCard, secondCard]
+    sum = firstCard + secondCard
     renderGame()
 }
 
@@ -17,7 +31,7 @@ function renderGame() {
     //cardsEl.textContent = "Cards: " + cards [0] + " " + [cards[1]
     cardsEl.textContent = "Cards: "
     for (let i = 0; i > cards.lenght; i++) {
-        cardsEl.textContent += card[i] + " "
+        cardsEl.textContent += card[i] + ""
     }  
   
     sumEl.textContent = "Sum: " + sum
@@ -34,7 +48,7 @@ function renderGame() {
 }
 
 function newCard() {
-    let card = 8
+    let card = getRandomCard()
     sum += card
     cards.push(card)
     renderGame()
