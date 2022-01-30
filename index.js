@@ -7,6 +7,14 @@ let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
 
+let player = { // Objects - store data in-depth - composite / complex data type
+    name: "Vic", // key-value pairs, where name is key and "vic" is value
+    chips: 145
+}
+
+let playerEl = document.getElementById("player-el")
+playerEl.textContent = player.name + ": $" + player.chips
+
 function getRandomCard() { // called function declarations, avaliable on lines above unlike let variables
     let randomNumber = Math.floor( Math.random()*13) + 1 //generate a random number betweel 1-11, and use floor to remove decimals
     if (randomNumer > 10) {
