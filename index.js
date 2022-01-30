@@ -17,12 +17,12 @@ playerEl.textContent = player.name + ": $" + player.chips
 
 function getRandomCard() { // called function declarations, avaliable on lines above unlike let variables
     let randomNumber = Math.floor( Math.random()*13) + 1 //generate a random number betweel 1-11, and use floor to remove decimals
-    if (randomNumer > 10) {
+    if (randomNumber > 10) {
         return 10
-    } else if (randomNumer === 1) {
+    } else if (randomNumber === 1) {
         return 11
     } else {
-        return randomNumer
+        return randomNumber
     }
 }
 
