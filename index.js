@@ -1,4 +1,5 @@
-let cards [] //array - ordered list of items
+let cards = []
+ //array - ordered list of items
 let sum = 0
 let hasBlackJack = false
 let isAlive = false
