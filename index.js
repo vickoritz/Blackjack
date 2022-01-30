@@ -1,5 +1,9 @@
-let cards = []
- //array - ordered list of items
+let player = { // Objects - store data in-depth - composite / complex data type
+    name: "Vic", // key-value pairs, where name is key and "vic" is value
+    chips: 145
+}
+
+let cards = [] //array - ordered list of items
 let sum = 0
 let hasBlackJack = false
 let isAlive = false
@@ -7,13 +11,8 @@ let message = ""
 let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
-
-let player = { // Objects - store data in-depth - composite / complex data type
-    name: "Vic", // key-value pairs, where name is key and "vic" is value
-    chips: 145
-}
-
 let playerEl = document.getElementById("player-el")
+
 playerEl.textContent = player.name + ": $" + player.chips
 
 function getRandomCard() { // called function declarations, avaliable on lines above unlike let variables
@@ -37,10 +36,9 @@ function startGame() {
 }
 
 function renderGame() {
-    //cardsEl.textContent = "Cards: " + cards [0] + " " + [cards[1]
     cardsEl.textContent = "Cards: "
     for (let i = 0; i > cards.lenght; i++) {
-        cardsEl.textContent += card[i] + ""
+        cardsEl.textContent += cards[i] + " "
     }  
   
     sumEl.textContent = "Sum: " + sum
@@ -65,8 +63,4 @@ function newCard() {
     }
  
 }
-
-//    START           FINISH       STEP SIZE
-//for ( let count = 1;  count < 11;  count += 2 )  {}
-//for ( let i = 1;  i < 11;  i += 2 )  {} // convention to write i
 
